@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Result</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        /* Add background image to the body */
+        body {
+            background-image: url('https://images.pexels.com/photos/16193316/pexels-photo-16193316/free-photo-of-art-wave-pattern-texture.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Replace 'your-image-url.jpg' with the actual URL of your image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+   
+</head>
+
+<body class="bg-gray-100 w-full">
+    <header class="bg-black text-white py-4 mt-32">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-semibold  mx-auto">Matri-Bhasa : Connecting with roots </h1>
+            <!-- Add any additional navigation links here -->
+        </div>
+    </header>
+    <div class="min-h-screen flex items-center justify-center">
+        
+    <div class="max-w-md mx-auto bg-white p-6 rounded shadow-md">
+        <h1 class="text-2xl font-semibold mb-4">Translation Result</h1>
+        <ul class="list-disc ml-6">
+            {% for text in texts %}
+                <li class="mb-2">{{ text }}</li>
+            {% endfor %}
+        </ul>
+        <div class="mt-4">
+            <form method="POST" action="/download">
+                <input type="hidden" name="text" value="{{ texts|join('\n') }}">
+                
+               
+            </form>
+            <div class="flex justify-center">
+                <a href="/" class="text-blue-500 hover:underline border-2 brounded-md ">Back to Home</a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!-- Footer -->
+<footer class="bg-gray-200 py-2 text-center mt-40">
+    <p class="text-sm text-gray-600">&copy; 2023 Team : Matri-Bhasa. All rights reserved.</p>
+</footer>
+</body>
+</html>

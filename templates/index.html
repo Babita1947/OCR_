@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Extraction and Translation</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        /* Add background image to the body */
+        body {
+            background-image: url('https://images.pexels.com/photos/16193316/pexels-photo-16193316/free-photo-of-art-wave-pattern-texture.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Replace 'your-image-url.jpg' with the actual URL of your image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <header class="bg-black text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-semibold mx-auto">Matri-Bhasa : Connecting with roots</h1>
+            <!-- Add any additional navigation links here -->
+        </div>
+    </header>
+
+    <div class="w-full md:w-96 mx-auto bg-white p-6 rounded shadow-md mt-4">
+        <h1 class="text-2xl font-semibold mb-4">Text Extraction and Translation</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2">Choose an option:</label>
+                <select name="choice" class="bg-gray-200 px-4 py-2 rounded w-full">
+                    <option value="1">Process PDF</option>
+                    <option value="2">Process Image</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <!-- Placeholder for Image Upload -->
+                <label class="block text-gray-700 font-bold mb-2">Add Image Here:</label>
+                <input type="file" name="image_file" accept=".jpg, .jpeg, .png" class="mb-2">
+            </div>
+            <div class="mb-4">
+                <!-- Placeholder for PDF Upload -->
+                <label class="block text-gray-700 font-bold mb-2">Add PDF Here:</label>
+                <input type="file" name="pdf_file" accept=".pdf" class="mb-2">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2">Select a language for translation:</label>
+                <select name="language_choice" class="bg-gray-200 px-4 py-2 rounded w-full">
+                    <option value="bn">Bengali</option>
+                    <option value="hi">Hindi</option>
+                    <option value="mr">Marathi</option>
+                    <option value="te">Telugu</option>
+                    <option value="ta">Tamil</option>
+                    <option value="pa">Punjabi</option>
+                    <option value="ml">Malayalam</option>
+                    <option value="gu">Gujarati</option>
+                    <!-- Add more language options here -->
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer w-full">
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 py-2 text-center mt-4">
+        <p class="text-sm text-gray-600">&copy; 2023 Team: Matri-Bhasa. All rights reserved.</p>
+    </footer>
+</body>
+</html>
