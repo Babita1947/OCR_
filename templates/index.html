@@ -9,15 +9,18 @@
 
     <style>
         /* Add background image to the body */
-        body {
-            background-image: url('https://images.pexels.com/photos/16193316/pexels-photo-16193316/free-photo-of-art-wave-pattern-texture.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Replace 'your-image-url.jpg' with the actual URL of your image */
+        #main {
+            background-image: url('https://images.pexels.com/photos/965119/pexels-photo-965119.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Replace 'your-image-url.jpg' with the actual URL of your image */
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            height: 100vh;
+
         }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col">
+<body class="bg-gray-100 flex flex-col ">
+  <div class="h-[100vh] relative" id="main">
     <!-- Navbar -->
     <header class="bg-black text-white py-4">
         <div class="container mx-auto flex justify-between items-center">
@@ -26,7 +29,7 @@
         </div>
     </header>
 
-    <div class="w-full md:w-96 mx-auto bg-white p-6 rounded shadow-md mt-4">
+    <div class="w-full md:w-96 mx-auto bg-white p-7 rounded shadow-md mt-4 ">
         <h1 class="text-2xl font-semibold mb-4">Text Extraction and Translation</h1>
         <form method="POST" enctype="multipart/form-data">
             <div class="mb-4">
@@ -65,10 +68,14 @@
             </div>
         </form>
     </div>
+    
 
     <!-- Footer -->
-    <footer class="bg-gray-200 py-2 text-center mt-4">
-        <p class="text-sm text-gray-600">&copy; 2023 Team: Matri-Bhasa. All rights reserved.</p>
+    <footer class="bg-black py-2 text-center mt-4 absolute bottom-0 w-full
+    ">
+        <p class="text-md text-white">&copy; 2023 Team: Matri-Bhasa. All rights reserved.</p>
     </footer>
+
+  </div>
 </body>
 </html>
